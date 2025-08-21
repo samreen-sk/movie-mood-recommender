@@ -226,7 +226,7 @@ watchlistModal.addEventListener('click', (e) => {
 
 // init
 updateWatchCount();
-if(moodButtons.length) moodButtons[0].click();
+
 
 
 // ===== Cursor Animation =====
@@ -263,4 +263,3 @@ goMoodBtn.addEventListener('click', () => {
     fetchMoviesByMood(selectedMood);
   }, 600);
 });
-
