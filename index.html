@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Mood Recommender</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>🎬 Movie Mood recomender</h1>
+      <p class="subtitle">Pick a mood — discover movies that fit it</p>
+    </div>
+    <div class="actions">
+      <button id="watchlistBtn" class="top-watchlist-btn">
+  📃 Watchlist (<span id="watchCount">0</span>)
+</button>
+
+    </div>
+
+  </header>
+
+  <section class="mood-row" role="tablist" aria-label="Movie moods">
+    <button class="mood-btn" data-mood="happy" aria-pressed="false">😊 <span>Happy</span></button>
+    <button class="mood-btn" data-mood="sad" aria-pressed="false">😢 <span>Sad</span></button>
+    <button class="mood-btn" data-mood="inspired" aria-pressed="false">💡 <span>Inspired</span></button>
+    <button class="mood-btn" data-mood="love" aria-pressed="false">❤️ <span>Love</span></button>
+    <button class="mood-btn" data-mood="thriller" aria-pressed="false">😱 <span>Thriller</span></button>
+  </section>
+<!-- Landing Page -->
+<!-- Landing Page -->
+<section id="landingPage" class="landing">
+  <div class="landing-card">
+    <h1>🎬 Movie Mood Recommender</h1>
+    <p>Pick your vibe, we’ll pick the movie!</p>
+    <label for="moodSelect">Enter your mood:</label>
+    <select id="moodSelect">
+      <option value="happy">😊 Happy</option>
+      <option value="sad">😢 Sad</option>
+      <option value="inspired">🌟 Inspired</option>
+      <option value="love">💕 Love</option>
+      <option value="thriller">😱 Thriller</option>
+    </select>
+    <button id="goMoodBtn">✨ Find Movies</button>
+  </div>
+</section>
+
+  <main>
+    <div id="movieContainer" class="movie-grid" aria-live="polite"></div>
+  </main>
+
+  <!-- Watchlist modal -->
+  <div id="watchlistModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-label="Your watchlist">
+      <button class="close" aria-label="Close watchlist">✖</button>
+      <h2>Your Watchlist</h2>
+      <div id="watchlistItems" class="watchlist-items"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
